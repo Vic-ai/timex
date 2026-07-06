@@ -55,9 +55,9 @@ defmodule Timex.Mixfile do
 
   def deps do
     [
-      {:tzdata, "~> 1.1"},
+      {:tzdata, git: "git@github.com:Vic-ai/tzdata.git"},
       {:combine, "~> 0.10"},
-      {:gettext, "~> 0.26"},
+      {:gettext, "~> 0.26 or ~> 1.0"},
       {:ex_doc, "~> 0.13", only: [:docs]},
       {:benchfella, "~> 0.3", only: [:bench]},
       {:dialyxir, "~> 1.0", only: [:dev], runtime: false},

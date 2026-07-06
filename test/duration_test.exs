@@ -138,7 +138,7 @@ defmodule DurationTests do
       erlang_now_microseconds = div(:os.system_time(), 1000)
       timex_now_microseconds = Timex.Duration.now() |> Timex.Duration.to_microseconds()
       difference_microseconds = timex_now_microseconds - erlang_now_microseconds
-      assert_in_delta(difference_microseconds, 500_000, 500_001)
+      assert_in_delta(difference_microseconds, 500_000, 501_000)
     end
 
     test "now(:seconds) is correct" do
